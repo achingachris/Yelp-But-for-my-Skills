@@ -1,5 +1,12 @@
+import Header from './components/Header'
+
 const App = () => {
-  return <div>My React Application</div>
+  return (
+    <>
+      <Header />
+      <p>My Application</p>
+    </>
+  )
 }
 
 export default App
