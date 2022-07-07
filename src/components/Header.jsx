@@ -19,11 +19,15 @@ const Header = ({ text, bgColor, textColor }) => {
 // default props
 Header.defaultProps = {
   text: 'Live Feedback',
+  bgColor: 'rgba(0,0,0,0.5)',
+  textColor: '#ff6a95',
 }
 
-// prop types
+// prop types type checking
 Header.propTypes = {
   text: PropTypes.string,
+  bgColor: PropTypes.string,
+  textColor: PropTypes.string,
 }
 
 export default Header

@@ -1,10 +1,13 @@
 import Header from './components/Header'
+import FeedbackItem from './components/FeedbackItem'
 
 const App = () => {
   return (
     <>
-      <Header bgColor='red' textColor='green' />
-      <p>My Application</p>
+      <Header />
+      <div className='container'>
+        <FeedbackItem />
+      </div>
     </>
   )
 }
