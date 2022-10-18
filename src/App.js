@@ -1,11 +1,11 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
-import FeedbackList from './components/FeedbackList'
-import FeedbackStats from './components/FeedbackStats'
-import FeedbackForm from './components/FeedbackForm'
 import AboutIconLink from './components/AboutIconLink'
-import AboutPage from './pages/AboutPage'
 import { FeedbackProvider } from './context/FeedbackContext'
+
+// Pages
+import HomePage from './pages/HomePage'
+import AboutPage from './pages/AboutPage'
 
 function App() {
   return (
@@ -13,14 +13,10 @@ function App() {
       <Router>
         <Header />
         <div className='container'>
-          <Route exact path='/'>
-            <FeedbackForm />
-            <FeedbackStats />
-            <FeedbackList />
-          </Route>
-
-          <Route path='/about' component={AboutPage} />
-
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/about' element={<AboutPage />} />
+          </Routes>
           <AboutIconLink />
         </div>
       </Router>
