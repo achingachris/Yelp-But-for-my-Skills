@@ -11,7 +11,7 @@ function App() {
   return (
     <FeedbackProvider>
       <Router>
-        <Header />
+        <Header text='Yelp Me' />
         <div className='container'>
           <Routes>
             <Route path='/' element={<HomePage />} />
